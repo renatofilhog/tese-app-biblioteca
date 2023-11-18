@@ -122,6 +122,16 @@ USE_TZ = True
 
 STATIC_URL = 'static/'
 
+# AllureDevelopment
+# Add static files directories
+# Run python manage.py collectstatic to collect static files into STATIC_ROOT
+# Type {% load static %} in the template to load static files
+# Type <link rel="stylesheet" href="{% static 'biblioteca/style.css' %}"> to load the css file
+STATICFILES_DIRS = [
+    os.path.join(BASE_DIR, 'biblioteca/static'),
+    os.path.join(BASE_DIR, 'setup/static')
+]
+
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
 
