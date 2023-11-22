@@ -1,3 +1,93 @@
-<h1>
-    Ver todos os artigos
-</h1>
+{% load static %}
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Biblioteca CDL</title>
+     <link rel="stylesheet" href="{% static '/biblioteca/styles/style.css' %}">
+</head>
+
+<body>
+    <div class="pagina-inicial">
+        <header class="cabecalho">
+            <img src="{% static '/biblioteca/assets/logo/logo-f-cdl.png' %}" alt="Logo da Faculdade Cdl" id="logo"/>
+        </header>
+        <main class="principal">
+            <section class="menu-lateral">
+                <nav class="menu-lateral__navegacao">
+                   <p>O sistema de armazenamento de trabalhos
+                    acadêmicos apresentado neste projeto foi
+                    desenvolvido por um grupo dedicado de
+                    alunos do curso de Análise e
+                    Desenvolvimento de Sistemas (ADS). Este
+                    grupo de estudantes, apaixonados por
+                    tecnologia e comprometidos com a
+                    excelência acadêmica, uniu forças para
+                    criar uma solução eficiente e prática para o
+                    gerenciamento de trabalhos acadêmicos.</p>
+                    <img src="{% static '/biblioteca/assets/logo/logo-f-cdl.png' %}" alt="Logo da Faculdade Cdl" id="logo"/>
+                    <div class="rodape__icones">
+                        <a href="" target=”_blank” >
+                            <img src="{% static '/biblioteca/assets/ícones/1x/twitter.png' %}" alt="ícone twitter" style="background-color: yellowgreen;">
+                        </a>
+                        <a href="" target=”_blank” >
+                            <img src="{% static '/biblioteca/assets/ícones/1x/instagram.png' %}" alt="ícone instagram" style="background-color: yellowgreen;">
+                        </a>
+                    </div>
+                </nav>
+            </section>
+            <section class="conteudo">
+                <section class="tags">
+                    <p class="tags__titulo">Trabalhos Acadêmicos:</p>
+                    <div class="cabecalho__busca">
+                        <div class="busca__fundo">
+                            <input class="busca__input" type="text" placeholder="O que você procura?">
+                            <img class="busca__icone" src="{% static 'biblioteca/assets/ícones/1x/search.png' %}" alt="ícone de search">
+                        </div>
+                    </div>
+                </section>
+                <section class="galeria">
+                    <div class="cards">
+                        <h2 class="cards__titulo"></h2>
+                        <ul class="cards__lista">
+                            {% for artigo in artigos %}
+                                {% if artigo.publicado == 1 %}
+                                <li class="card">
+                                    <a href="{{ artigo.arquivo.url }}" download>
+                                        <img class="card__imagem" src="{% static 'biblioteca/assets/imagens/galeria/carina-nebula.png' %}" alt="foto">
+                                    </a>
+                                    <div class="card__info">
+                                        <p class="card__titulo">{{ artigo.titulo }}</p>
+                                        <div class="card__texto">
+                                            <p class="card__descricao">{{ artigo.autor }}</p>
+                                            <span>
+                                                <img src="{% static 'biblioteca/assets/ícones/1x/Mais vistas - ativo.png' %}" alt="ícone de visualizar">
+                                            </span>
+                                        </div>
+                                    </div>
+                                </li>
+                                {% endif %}
+                            {% endfor %}
+
+                        </ul>
+                    </div>
+                </section>
+            </section>
+        </main>
+    </div>
+    <footer class="rodape">
+        <div class="rodape__icones">
+            <a href="https://twitter.com/" target=”_blank” >
+                <img src="{% static 'biblioteca/assets/ícones/1x/twitter.png' %}" alt="ícone twitter">
+            </a>
+            <a href="https://www.instagram.com/" target=”_blank” >
+                <img src="{% static 'biblioteca/assets/ícones/1x/instagram.png' %}" alt="ícone instagram">
+            </a>
+        </div>
+        <p class="rodape__texto">Flávio Renato - Junior Mathias</p>
+    </footer>
+</body>
+
+</html>

@@ -1,0 +1,224 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+body {
+    line-height: 1;
+    font-family: 'Space Grotesk', sans-serif;
+    min-height: 100vh;
+  
+}
+
+.cabecalho {
+    align-items: center;
+    display: flex;
+    margin: 1.5rem 0 4rem 0;
+}
+.cabecalho #logo {
+    width: 20%;
+}
+
+.cabecalho__busca {
+    align-items: center;
+    border-radius: 10px;
+    background-color: #fff;
+    display: flex;
+    height: auto;
+    width: 30%; 
+    padding: 2px;
+}
+
+.busca__fundo {
+    align-items: center;
+    border-radius: 8px;
+    display: flex;
+    margin: 0 auto;
+    width: 100%;
+}
+
+.busca__input {
+    align-items: center;
+    background-color: transparent;
+    box-shadow: 0px 10px 10px #00000050;
+    border-radius: 5px;
+    border: none;
+    color: gray;
+    font-size: 1rem;
+    height: 24px;
+    padding: 10px;
+    width: 500px;
+}
+.busca__input:focus, input:focus {
+    outline: 0;
+}
+
+.busca__icone { cursor: pointer; }
+
+.cards {
+    width: 100%;
+}
+li {
+    list-style-type: none;
+  }
+
+.cards__titulo {
+    border-bottom: 1px solid #cecece;
+    margin-top: 1.5rem;
+    margin-bottom: 2.5rem;
+}
+
+.cards__lista{
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: center;
+}
+
+.card {
+    border-radius: 10px;
+    box-shadow: 0px 10px 10px #00000050;
+    color: #000;
+    margin-bottom: 1.5rem;
+    margin-left: 30px;
+    position: relative;
+    width: 250px;
+}
+
+.card__imagem {
+    width: 250px;
+    border-radius: 10px 10px 0 0;
+}
+
+.card__info {
+    font-size: 1.2rem;
+    padding: 0 1.5rem 1rem 1.5rem;
+}
+
+.card__titulo {
+    font-weight: bold;
+    line-height: 1.2rem;
+    margin-top: 0.8em;
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.card__texto {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.card__texto img {
+    cursor: pointer;
+}
+
+.card__descricao {
+    font-size: 0.6em;
+    margin-top: 0.8em;
+}
+
+.galeria {
+    display: flex;
+    width: 100%;
+}
+
+.menu-lateral {
+    padding-right: 2.5rem;
+    box-sizing: border-box;
+    min-width: 300px;
+    width: 300px;
+}
+
+.menu-lateral__navegacao {
+    display: flex;
+    flex-direction: column;
+    margin-top: 150px;
+}
+
+.menu-lateral__navegacao p {
+    font-family: 'Space Grotesk', sans-serif;
+    text-align: justify;
+    line-height: 1.4 !important;
+    margin-bottom: 1.5rem;
+    color: gray;
+}
+
+.menu-lateral__navegacao img {
+    margin-top: 20px;
+}
+.menu-lateral__navegacao .rodape__icones {
+    display: flex;
+    align-items: center;
+}
+
+.pagina-inicial {
+    max-width: 1640px;
+    padding: 1.5rem;
+    margin: 0 auto;
+}
+
+.principal {
+    display: flex;
+    justify-content: space-between;
+}
+
+.rodape {
+    width: 100%;
+    padding: 1.7rem 3rem;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-between;
+    color: #FFFFFF;
+    background: linear-gradient(#041833,#04244F,#154580);
+    
+}
+
+.rodape__icones {
+    width: 80px;
+    display: flex;
+    align-items: center;
+    padding-left: 2%;
+    justify-content: space-between;
+}
+
+.rodape__texto {
+    font-size: 1.1rem;
+    display: flex;
+    align-items: center;
+    padding-right: 2%;
+}
+
+.tags {
+    display: flex;
+    justify-content: space-between;
+    color: gray;
+    font-size: 1.3rem;
+}
