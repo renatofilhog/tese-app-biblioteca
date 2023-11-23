@@ -49,6 +49,7 @@
                     <div class="cards">
                         <h2 class="cards__titulo"></h2>
                         <ul class="cards__lista">
+                        {% if artigos %}
                             {% for artigo in artigos %}
                                 {% if artigo.publicado == 1 %}
                                      <div id="myModal" class="modal showmodal-{{ artigo.id }}">
@@ -86,6 +87,9 @@
                                     </li>
                                 {% endif %}
                             {% endfor %}
+                        	{% else %}
+                                <h2 class="cards__titulo">Nenhum artigo encontrado</h2>
+                        {% endif %}
                         </ul>
                     </div>
                 </section>
